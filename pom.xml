@@ -55,7 +55,6 @@
         <connection>scm:git:https://github.com/fatihkocc9/sfg-pet-clinic.git</connection>
         <developerConnection>scm:git:https://github.com/fatihkocc9/sfg-pet-clinic.git</developerConnection>
         <url>https://github.com/fatihkocc9/sfg-pet-clinic</url>
-        <tag>0.0.3-SNAPSHOT</tag>
     </scm>
 
 </project>
