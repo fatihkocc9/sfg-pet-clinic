@@ -1,9 +1,6 @@
 package com.fatihkocc9.sfgpetclinic.bootstrap;
 
-import com.fatihkocc9.sfgpetclinic.model.Owner;
-import com.fatihkocc9.sfgpetclinic.model.Pet;
-import com.fatihkocc9.sfgpetclinic.model.PetType;
-import com.fatihkocc9.sfgpetclinic.model.Vet;
+import com.fatihkocc9.sfgpetclinic.model.*;
 import com.fatihkocc9.sfgpetclinic.service.OwnerService;
 import com.fatihkocc9.sfgpetclinic.service.PetService;
 import com.fatihkocc9.sfgpetclinic.service.PetTypeService;
@@ -39,6 +36,12 @@ public class DataLoader implements CommandLineRunner {
     cat.setName("Dog");
 
     petTypeService.save(cat);
+
+    Specialty specialty1 = new Specialty();
+    specialty1.setDescription("Cat chronic diseases");
+
+    Specialty specialty2 = new Specialty();
+    specialty2.setDescription("Cat heart issues");
 
     Owner owner1 = new Owner();
     owner1.setFirstName("Fatih");
@@ -76,12 +79,14 @@ public class DataLoader implements CommandLineRunner {
     Vet vet1 = new Vet();
     vet1.setFirstName("Kevser");
     vet1.setLastName("Koc");
+    vet1.getSpecialtySet().add(specialty1);
 
     vetService.save(vet1);
 
     Vet vet2 = new Vet();
     vet2.setFirstName("Nesenur");
     vet2.setLastName("Koc");
+    vet2.getSpecialtySet().add(specialty2);
 
     vetService.save(vet2);
 
