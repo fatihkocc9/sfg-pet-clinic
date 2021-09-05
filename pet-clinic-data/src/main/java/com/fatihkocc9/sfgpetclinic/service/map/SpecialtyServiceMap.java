@@ -2,9 +2,11 @@ package com.fatihkocc9.sfgpetclinic.service.map;
 
 import com.fatihkocc9.sfgpetclinic.model.Specialty;
 import com.fatihkocc9.sfgpetclinic.service.SpecialtyService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class SpecialtyServiceMap extends AbstractMapService<Specialty, Long> implements SpecialtyService {
 
 
